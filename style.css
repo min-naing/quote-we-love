@@ -13,7 +13,7 @@ blockquote {
     font-family: 'Open Sans', sans-serif;
     font-style: italic;
     color: #555555;
-    padding: 1.2em 30px 1.2em 75px;
+    padding: 1.2em 30px 1.2em 50px;
     border-left: 8px solid #78C0A8;
     line-height: 1.6;
     position: relative;
@@ -68,7 +68,7 @@ blockquote .quote-footer a:hover {
 @media (max-width: 768px) {
     blockquote {
         width: 85%;
-        padding: 1.2em 20px 1.2em 55px;
+        padding: 1.2em 20px 1.2em 40px;
     }
 }
 
@@ -76,7 +76,7 @@ blockquote .quote-footer a:hover {
 @media (max-width: 480px) {
     blockquote {
         width: 95%;
-        padding: 1.2em 15px 1.2em 45px;
+        padding: 1.2em 15px 1.2em 35px;
         border-left-width: 5px;
     }
 
