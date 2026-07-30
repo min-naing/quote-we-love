@@ -30,6 +30,8 @@ blockquote {
     position: relative;
     background: #EDEDED;
     text-align: center;
+
+    overflow: hidden; /* Prevent decorative quote from causing horizontal scroll */
 }
 
 blockquote::before {
