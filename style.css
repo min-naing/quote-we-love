@@ -131,6 +131,8 @@ blockquote strong {
         padding: 2.6rem 1.5rem 1.5rem 2.3rem;
 
         border-left-width:6px;
+
+        border-radius: 8px;
     }
 
     blockquote::before{
@@ -158,7 +160,7 @@ blockquote strong {
 
         padding: 2.2rem 1rem 1.3rem 1.6rem;
 
-        border-radius:14px;
+        border-radius: 4px;
 
         font-size:1.1rem;
     }
