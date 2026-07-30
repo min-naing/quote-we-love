@@ -1,3 +1,13 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0 1rem;
+    overflow-x: hidden; /* prevent horizontal scroll */
+}
+
 h1 {
     text-align: center;
     font-family: 'Open Sans', sans-serif;
@@ -75,7 +85,8 @@ blockquote .quote-footer a:hover {
 /* Mobile */
 @media (max-width: 480px) {
     blockquote {
-        width: 95%;
+        width: 100%;
+        margin: 30px auto;
         padding: 1.2em 15px 1.2em 35px;
         border-left-width: 5px;
     }
