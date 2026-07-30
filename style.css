@@ -1,109 +1,199 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
+}
+
+:root {
+    --primary: #2F80ED;
+    --primary-light: #56CCF2;
+    --text: #2D3748;
+    --text-light: #4A5568;
+    --card: #ffffff;
+    --background: linear-gradient(135deg, #eef6ff, #f8fbff);
 }
 
 body {
     margin: 0;
-    padding: 0 1rem;
-    overflow-x: hidden; /* prevent horizontal scroll */
-}
+    padding: 1rem;
+    min-height: 100vh;
 
-.d-block {
-    display: block;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-.text-center {
-    text-align: center;
+    background: var(--background);
+
+    font-family: "Open Sans", sans-serif;
 }
 
 h1 {
+    margin: 2rem 0;
+
+    color: var(--text);
+
+    font-size: clamp(1.8rem, 4vw, 2.7rem);
+    font-weight: 700;
     text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    color: #333333;
-    font-size: clamp(1.4rem, 4vw, 2rem); /* scales with screen */
-    margin-top: 40px;
 }
 
 blockquote {
-    font-size: clamp(1rem, 2.5vw, 1.4em); /* scales with screen */
-    width: 100%;
-    max-width: 700px;               /* won't exceed 700px on large screens */
-    margin: 50px auto;
-    font-family: 'Open Sans', sans-serif;
-    font-style: italic;
-    color: #555555;
-    padding: 1.2em 30px 1.2em 50px;
-    border-left: 8px solid #78C0A8;
-    line-height: 1.6;
     position: relative;
-    background: #EDEDED;
+
+    width: 100%;
+    max-width: 720px;
+
+    padding: 3rem 2rem 1.8rem 2.8rem;
+
+    background: var(--card);
+
+    border-left: 8px solid var(--primary);
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.08),
+        0 4px 10px rgba(0,0,0,.04);
+
+    color: var(--text-light);
+
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+
+    line-height: 1.8;
+
     text-align: center;
 
-    overflow: hidden; /* Prevent decorative quote from causing horizontal scroll */
+    overflow: hidden;
 }
 
 blockquote::before {
-    font-family: Arial;
-    content: "\201C";
-    color: #78C0A8;
-    font-size: 4em;
-    position: absolute;
-    left: 10px;
-    top: -10px;
-}
+    content: "“";
 
-blockquote::after {
-    content: '';
+    position: absolute;
+
+    top: 8px;
+    left: 18px;
+
+    font-size: 5rem;
+
+    color: rgba(47,128,237,.15);
+
+    font-family: Georgia, serif;
+
+    line-height: 1;
 }
 
 blockquote p {
     margin: 0;
 }
 
-blockquote strong {
-    color: #333333;
-    font-style: normal;
-    font-weight: bold;
-}
-
-blockquote .quote-footer {
+.d-block {
     display: block;
-    color: #333333;
+    margin-top: .45rem;
+}
+
+blockquote strong {
+    color: var(--text);
+
+    font-weight: 700;
+
+    letter-spacing: .5px;
+}
+
+.quote-footer {
+    margin-top: 1.7rem;
+
     font-style: normal;
-    font-weight: bold;
-    margin-top: 1em;
+
+    font-weight: 600;
+
+    color: var(--text);
 }
 
-blockquote .quote-footer a {
-    color: #78C0A8;
+.quote-footer a {
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 28px;
+    height: 28px;
+
+    margin-left: .5rem;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+
+    color: white;
+
     text-decoration: none;
-    font-size: 0.75em;
-    margin-left: 6px;
+
+    transition: .25s;
 }
 
-blockquote .quote-footer a:hover {
-    text-decoration: underline;
+.quote-footer a:hover {
+    background: var(--primary-light);
+
+    transform: translateY(-2px);
 }
 
 /* Tablet */
-@media (max-width: 768px) {
-    blockquote {
-        width: 85%;
-        padding: 1.2em 20px 1.2em 40px;
+@media (max-width:768px){
+
+    body{
+        padding:1rem;
     }
+
+    blockquote{
+
+        padding:1.8rem 1.5rem 1.5rem 2.3rem;
+
+        border-left-width:6px;
+    }
+
+    blockquote::before{
+
+        font-size:5rem;
+
+        top:-15px;
+
+        left:14px;
+    }
+
 }
 
 /* Mobile */
-@media (max-width: 480px) {
-    blockquote {
-        width: 100%;
-        margin: 30px auto;
-        padding: 1.2em 15px 1.2em 35px;
-        border-left-width: 5px;
+@media (max-width:480px){
+
+    h1{
+
+        margin:1.5rem 0;
+
+        font-size:1.8rem;
     }
 
-    blockquote::before {
-        font-size: 3em;
-        left: 6px;
+    blockquote{
+
+        padding:1.5rem 1rem 1.3rem 1.7rem;
+
+        border-radius:14px;
+
+        font-size:1.1rem;
     }
+
+    blockquote::before{
+
+        font-size:4rem;
+
+        top:-10px;
+
+        left:10px;
+    }
+
+    .quote-footer{
+
+        font-size:.95rem;
+    }
+
 }
