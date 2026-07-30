@@ -68,19 +68,16 @@ blockquote {
 
 blockquote::before {
     content: "“";
-
-    position: absolute;
-
-    top: 8px;
-    left: 18px;
-
-    font-size: 5rem;
-
-    color: rgba(47,128,237,.15);
-
     font-family: Georgia, serif;
 
+    position: absolute;
+    top: 12px;
+    left: 18px;
+
+    font-size: 4.5rem;
     line-height: 1;
+
+    color: rgba(42, 157, 143, 0.25); /* subtle teal */
 }
 
 blockquote p {
@@ -121,21 +118,13 @@ blockquote strong {
 
     margin-left: .5rem;
 
-    border-radius: 50%;
-
-    background: var(--primary);
-
-    color: white;
+    color: var(--primary);
 
     text-decoration: none;
-
-    transition: .25s;
 }
 
 .quote-footer a:hover {
-    background: var(--primary-light);
-
-    transform: translateY(-2px);
+    text-decoration: underline;
 }
 
 /* Tablet */
