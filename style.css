@@ -49,6 +49,15 @@ h1 {
     color: var(--text);
 }
 
+.quotes {
+    width: 100%;
+    max-width: 720px;
+}
+
+.quotes blockquote + blockquote {
+    margin-top: 2rem;
+}
+
 blockquote {
 
     position: relative;
