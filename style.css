@@ -1,98 +1,46 @@
-/* Reset */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400italic,700');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: system-ui, sans-serif;
-    background: #f5f7fb;
-    color: #222;
-}
-
-/* Center everything */
-
-.container {
-    min-height: 100vh;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    padding: 2rem;
-
-    text-align: center;
-}
-
-/* Heading */
-
-h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    margin-bottom: 2rem;
-}
-
-/* Quote Card */
-
-.quote-card {
-    max-width: 800px;
-
-    background: white;
-
-    padding: 3rem;
-
-    border-left: 8px solid #2563eb;
-
-    border-radius: 16px;
-
-    box-shadow:
-        0 15px 35px rgba(0,0,0,.08);
-}
-
-.quote-card p {
-    font-size: clamp(1.5rem, 4vw, 2.4rem);
-    font-style: italic;
-    line-height: 1.5;
-}
-
-.quote-card strong {
-    font-style: normal;
-    font-weight: 800;
-    color: #2563eb;
-}
-
-.quote-card cite {
-    display: block;
-    margin-top: 1.5rem;
-    font-size: 1rem;
-    color: #666;
-}
-
-/* Mobile */
-
-@media (max-width: 600px) {
-
-    .quote-card {
-        padding: 2rem;
+    blockquote {
+      font-size: 1.4em;
+      width: 60%;
+      margin: 50px auto;
+      font-family: 'Open Sans', sans-serif;
+      font-style: italic;
+      color: #555555;
+      padding: 1.2em 30px 1.2em 75px;
+      border-left: 8px solid #78C0A8;
+      line-height: 1.6;
+      position: relative;
+      background: #EDEDED;
+      text-align: center;
     }
 
-}
+    blockquote::before {
+      font-family: Arial;
+      content: "\201C";
+      color: #78C0A8;
+      font-size: 4em;
+      position: absolute;
+      left: 10px;
+      top: -10px;
+    }
 
-/* .contrast-quote {
-  background-color: #111111;
-  color: #ffffff;
-  border-left: 6px solid #ff0055;
-  padding: 20px 24px;
-  margin: 20px 0;
-  font-size: 1.2rem;
-  font-family: sans-serif;
-}
+    blockquote::after { content: ''; }
 
-.contrast-quote cite {
-  display: block;
-  margin-top: 10px;
-  font-size: 0.9rem;
-  color: #bbbbbb;
-} */
+    blockquote p {
+      margin: 0;
+    }
+
+    blockquote strong {
+      color: #333333;
+      font-style: normal;
+      font-weight: bold;
+    }
+
+    blockquote footer {
+      display: block;
+      color: #333333;
+      font-style: normal;
+      font-weight: bold;
+      margin-top: 1em;
+    }
